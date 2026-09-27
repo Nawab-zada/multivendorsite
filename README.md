@@ -24,7 +24,7 @@ The platform includes role-based authorization, vendor-specific order separation
 
 Vendor routes use ownership checks where applicable so vendors cannot access another vendor's private resources.
 
-### Administratorer
+### Administrator
 
 - View marketplace operations
 - Manage users, vendors, products, categories, and orders
@@ -219,31 +219,7 @@ Place screenshots in a `screenshots/` directory at this project root to use the 
 
 ### Marketplace
 
-![Velora Homepage](./screenshots/homepage.png)
 
-### Product Discovery
-
-![Products](./screenshots/products.png)
-
-### Product Details
-
-![Product Details](./screenshots/product-details.png)
-
-### Shopping Cart
-
-![Cart](./screenshots/cart.png)
-
-### Checkout
-
-![Checkout](./screenshots/checkout.png)
-
-### Vendor Dashboard
-
-![Vendor Dashboard](./screenshots/vendor-dashboard.png)
-
-### Admin Dashboard
-
-![Admin Dashboard](./screenshots/admin-dashboard.png)
 
 ## Design Philosophy
 
