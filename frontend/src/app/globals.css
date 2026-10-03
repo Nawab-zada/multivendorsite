@@ -1,0 +1,237 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-velora-ink: var(--velora-ink);
+  --color-velora-ivory: var(--velora-ivory);
+  --color-velora-paper: var(--velora-paper);
+  --color-velora-stone: var(--velora-stone);
+  --color-velora-muted: var(--velora-muted);
+  --color-velora-olive: var(--velora-olive);
+  --color-velora-gold: var(--velora-gold);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist);
+  --font-heading: var(--font-editorial);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --velora-ink: #181714;
+  --velora-ivory: #F4F0E8;
+  --velora-paper: #FAF8F3;
+  --velora-stone: #D8D0C3;
+  --velora-muted: #777168;
+  --velora-olive: #34382F;
+  --velora-gold: #A98552;
+  --background: var(--velora-ivory);
+  --foreground: var(--velora-ink);
+  --card: var(--velora-paper);
+  --card-foreground: var(--velora-ink);
+  --popover: var(--velora-paper);
+  --popover-foreground: var(--velora-ink);
+  --primary: var(--velora-olive);
+  --primary-foreground: var(--velora-paper);
+  --secondary: var(--velora-stone);
+  --secondary-foreground: var(--velora-ink);
+  --muted: var(--velora-stone);
+  --muted-foreground: var(--velora-muted);
+  --accent: var(--velora-gold);
+  --accent-foreground: var(--velora-ink);
+  --destructive: #9f3f32;
+  --border: var(--velora-stone);
+  --input: var(--velora-stone);
+  --ring: var(--velora-gold);
+  --chart-1: var(--velora-olive);
+  --chart-2: var(--velora-gold);
+  --chart-3: var(--velora-muted);
+  --chart-4: var(--velora-stone);
+  --chart-5: var(--velora-ink);
+  --radius: 0.625rem;
+  --sidebar: var(--velora-paper);
+  --sidebar-foreground: var(--velora-ink);
+  --sidebar-primary: var(--velora-olive);
+  --sidebar-primary-foreground: var(--velora-paper);
+  --sidebar-accent: var(--velora-stone);
+  --sidebar-accent-foreground: var(--velora-ink);
+  --sidebar-border: var(--velora-stone);
+  --sidebar-ring: var(--velora-gold);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-geist), sans-serif;
+    background: #f6f2ea;
+    color: #181714;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-2 outline-offset-2 outline-velora-gold;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-editorial), Georgia, serif;
+}
+
+::selection {
+  background: #181714;
+  color: #f6f2ea;
+}
+
+/* Admin surfaces use the Velora palette without changing storefront pages. */
+.admin-shell .bg-slate-50 {
+  background-color: var(--velora-ivory);
+}
+
+.admin-shell .bg-white {
+  background-color: var(--velora-paper);
+}
+
+.admin-shell .bg-slate-950 {
+  background-color: var(--velora-ink);
+}
+
+.admin-shell .text-white {
+  color: var(--velora-ivory);
+}
+
+.admin-shell .text-slate-950,
+.admin-shell .text-slate-900 {
+  color: var(--velora-ink);
+}
+
+.admin-shell .text-slate-700 {
+  color: var(--velora-olive);
+}
+
+.admin-shell .text-slate-600,
+.admin-shell .text-slate-500,
+.admin-shell .text-slate-300 {
+  color: var(--velora-muted);
+}
+
+.admin-shell .border-slate-100,
+.admin-shell .border-slate-200,
+.admin-shell .border-slate-300 {
+  border-color: var(--velora-stone);
+}
+
+.admin-shell .hover\:bg-slate-100:hover {
+  background-color: var(--velora-ivory);
+}
+
+.admin-shell .hover\:border-slate-400:hover {
+  border-color: var(--velora-gold);
+}
+
+.admin-shell .bg-amber-50 {
+  background-color: color-mix(in srgb, var(--velora-gold) 14%, var(--velora-paper));
+}
+
+.admin-shell .border-amber-200 {
+  border-color: var(--velora-gold);
+}
+
+.admin-shell .bg-amber-100 {
+  background-color: color-mix(in srgb, var(--velora-gold) 20%, var(--velora-paper));
+}
+
+.admin-shell .text-amber-800 {
+  color: var(--velora-ink);
+}
+
+.admin-shell .bg-emerald-600 {
+  background-color: var(--velora-olive);
+}
+
+.admin-shell .hover\:bg-emerald-700:hover {
+  background-color: var(--velora-gold);
+}
+
+.admin-shell .text-red-700 {
+  color: #8f3329;
+}
