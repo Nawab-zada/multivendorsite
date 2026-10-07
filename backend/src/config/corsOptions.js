@@ -1,7 +1,12 @@
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  "http://localhost:3000",
-].filter(Boolean);
+const configuredOrigins = (process.env.FRONTEND_URL || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+const allowedOrigins =
+  process.env.NODE_ENV === "production"
+    ? configuredOrigins
+    : [...new Set([...configuredOrigins, "http://localhost:3000"])];
 
 const corsOptions = {
   origin: (origin, callback) => {

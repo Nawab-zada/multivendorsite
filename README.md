@@ -161,6 +161,8 @@ Create `frontend/.env.local`:
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
 
+In your frontend hosting settings, set `NEXT_PUBLIC_API_URL` to the deployed backend URL followed by `/api` (for example, `https://api.example.com/api`). This variable must be available when the frontend is built.
+
 ### Backend
 
 Create `backend/.env`:
@@ -173,6 +175,8 @@ JWT_ACCESS_SECRET=your_access_token_secret
 JWT_REFRESH_SECRET=your_refresh_token_secret
 FRONTEND_URL=http://localhost:3000
 ```
+
+In your backend hosting settings, set `FRONTEND_URL` to the deployed frontend origin (for example, `https://shop.example.com`). Separate multiple allowed frontend origins with commas. Set `NODE_ENV=production`; the backend host will normally provide `PORT` automatically. Keep real credentials in the hosting provider's environment settings, not in source control.
 
 ## Run Locally
 
